@@ -69,10 +69,10 @@ Se usó una imagen de entrada llamada `input.jpg` (resolución: 1920x1080).
 
 | Versión        | Núcleos | Tiempo de ejecución |
 |----------------|---------|---------------------|
-| Secuencial     | 1       | 1350 ms             |
-| Concurrente    | 4       | 420 ms              |
+| Secuencial     | 1       | 32.5285 ms          |
+| Concurrente    | 4       | 6.006 ms            |
 
-*Pruebas realizadas en un procesador Intel i5 con 8 GB de RAM, Linux 64-bit.*
+Estas pruebas se realizaron usando `#include <chrono>`
 
 ---
 
@@ -90,7 +90,7 @@ Se usó una imagen de entrada llamada `input.jpg` (resolución: 1920x1080).
 - Tiempo total (asumiendo paralelismo ideal): `O(n / t)`, donde `t` = número de hilos
 - En práctica sigue siendo `O(n)` por la suma total del trabajo
 
-Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la versión concurrente es mucho más rápida.
+Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la versión concurrente es mucho más rápida debido a dividir el trabajo en diferentes hilos.
 
 ---
 
@@ -98,22 +98,7 @@ Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la v
 
 ### Diagrama de arquitectura
 
-+-------------------------+
-| Programa Principal |
-+-----------+-------------+
-|
-Divide imagen
-|
-+--------+--------+--------+--------+
-| Hilo 1 Hilo 2 ... Hilo N |
-| Procesa bloque de píxeles |
-+--------+--------+--------+--------+
-|
-Resultado final
-|
-+-----------+-------------+
-| Imagen en escala |
-+-------------------------+
+![Renderizado concurrente](render.png)
 
 ---
 
