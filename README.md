@@ -74,6 +74,8 @@ Se usó una imagen de entrada llamada `input.jpg` (resolución: 1920x1080).
 
 Estas pruebas se realizaron usando `#include <chrono>`
 
+![Prueba de ejecución](Prueba_imagen.png)
+
 ---
 
 ## 📊 Análisis de Complejidad
