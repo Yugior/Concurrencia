@@ -160,6 +160,7 @@ Asegúrate de tener los archivos `stb_image.h` y `stb_image_write.h` en el mismo
 ```bash
 g++ -std=c++11 -pthread main.cpp -o renderizador      
 g++ -std=c++11 -pthread sequential.cpp -o renderizador
+```
 ---
 
 ## ✅ Conclusión
