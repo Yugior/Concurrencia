@@ -113,6 +113,52 @@ Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la v
 
 ![Renderizado concurrente](render.png)
 
+En este modelo se observa de manera grafica el funcionamiento de los hilos. En este caso en particular al considerar las imagenes como matrices.
+
+
+### Modelo 1: Procesamiento Multihilo
+
+#### Descripción
+
+En este modelo tratamos a las imagenes en forma de matrices, recorriendolas a traves de una función for
+
+- Se detecta el número de núcleos disponibles del sistema.
+- La imagen se divide en secciones horizontales (filas).
+- Cada hilo procesa su sección de manera independiente, aplicando el filtro de escala de grises.
+- Se espera a que todos los hilos terminen antes de guardar la imagen.
+
+Este enfoque permite aprovechar múltiples núcleos para reducir el tiempo total de procesamiento, especialmente útil para imágenes grandes.
+
+```bash
+#main.cpp
+for (int y = start_row; y < end_row; ++y) {
+        for (int x = 0; x < width; ++x) {
+            int i = y * stride + x * channels;
+---
+
+### Modelo 2: Procesamiento Secuencial
+
+#### Descripción
+En este modelo se tratan a las imagenes de forma lineal, recorriendo la imagen en un  solo bucle
+- Se carga la imagen completamente en memoria.
+- Se recorre la imagen de forma secuencial, procesando cada píxel uno a uno.
+- Cada componente RGB se convierte a escala de grises y se almacena en una nueva imagen.
+- Se guarda la imagen resultante al finalizar.
+
+Este método es más simple pero puede ser más lento para imágenes grandes o sistemas con múltiples núcleos disponibles.
+
+```bash
+for (int i = 0; i < width * height; i++) {
+    int index = i * 3;
+```
+
+### Compilación
+
+Asegúrate de tener los archivos `stb_image.h` y `stb_image_write.h` en el mismo directorio que el código fuente.
+
+```bash
+g++ -std=c++11 -pthread main.cpp -o renderizador      
+g++ -std=c++11 -pthread sequential.cpp -o renderizador
 ---
 
 ## ✅ Conclusión
