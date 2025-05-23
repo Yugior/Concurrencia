@@ -82,7 +82,9 @@ Estas pruebas se realizaron usando `#include <chrono>`
 
 ![Prueba de ejecución](Prueba_imagen.png)
 
-En caso de realizar pruebas, estan `kirbo.jpg` y `Sore.jpg`
+En caso de realizar pruebas, estan `kirbo.jpg` y `Sore.jpg`.
+
+En caso de realizar pruebas de error, esta `sorita.png`.
 
 
 ---
