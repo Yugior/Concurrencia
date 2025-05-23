@@ -134,6 +134,7 @@ Este enfoque permite aprovechar múltiples núcleos para reducir el tiempo total
 for (int y = start_row; y < end_row; ++y) {
         for (int x = 0; x < width; ++x) {
             int i = y * stride + x * channels;
+```
 ---
 
 ### Modelo 2: Procesamiento Secuencial
