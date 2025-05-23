@@ -1,7 +1,7 @@
 # Concurrencia
 ## Horacio Villela Hernández  
 ## A01712206  
-## 29/04/2025  
+## 23/05/2025  
 
 # 🖼️ Renderizador de Imágenes en Escala de Grises
 
