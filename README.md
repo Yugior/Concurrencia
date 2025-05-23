@@ -1,3 +1,8 @@
+# Expresion-Gramatical
+## Horacio Villela Hernández  
+## A01712206  
+## 29/04/2025  
+
 # 🖼️ Renderizador de Imágenes en Escala de Grises
 
 ## 📌 Descripción del Proyecto
@@ -108,15 +113,6 @@ Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la v
 
 ---
 
-## 📚 Referencias
-
-- Barrett, S. (2023). *stb single-file public domain libraries*. GitHub. https://github.com/nothings/stb  
-- ISO/IEC. (2017). *ISO/IEC 14882:2017 - Programming Languages — C++*. ISO.  
-- Silberschatz, A., Galvin, P. B., & Gagne, G. (2020). *Operating System Concepts* (10a ed.). Wiley.  
-- Rauber, T., & Rünger, G. (2013). *Parallel Programming: for Multicore and Cluster Systems*. Springer.
-
----
-
 ## ✅ Conclusión
 
 Este proyecto demuestra cómo la **programación concurrente**, cuando se aplica a problemas paralelizables como el procesamiento de imágenes, puede **mejorar significativamente el rendimiento**, sin cambiar la complejidad teórica.
@@ -128,10 +124,14 @@ Se presentan dos soluciones:
 Ambas están documentadas, probadas y correctamente implementadas.
 
 ---
+## 📚 Referencias
 
-## 🧾 Créditos
+- Barrett, S. (2023). *stb single-file public domain libraries*. GitHub. https://github.com/nothings/stb  
+- ISO/IEC. (2017). *ISO/IEC 14882:2017 - Programming Languages — C++*. ISO.  
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2020). *Operating System Concepts* (10a ed.). Wiley.  
+- Rauber, T., & Rünger, G. (2013). *Parallel Programming: for Multicore and Cluster Systems*. Springer.
 
-Desarrollado por [Tu Nombre], como parte de la evidencia **E4: Demostración de un Paradigma de Programación** para el curso de [Nombre del curso / Universidad].
+---
 
 
 
