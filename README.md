@@ -54,8 +54,8 @@ Esta operación se ejecuta **una vez por píxel**.
 
 | Biblioteca              | Propósito                                      | Fuente / Referencia |
 |-------------------------|-----------------------------------------------|----------------------|
-| `stb_image.h`           | Leer imágenes JPG, PNG, BMP                   | [stb GitHub](https://github.com/nothings/stb) |
-| `stb_image_write.h`     | Guardar imágenes procesadas                  | [stb GitHub](https://github.com/nothings/stb) |
+| `stb_image.h`           | Leer imágenes JPG, PNG, BMP                   | [stb GitHub](https://github.com/nothings/stb/blob/master/stb_image.h) |
+| `stb_image_write.h`     | Guardar imágenes procesadas                  | [stb GitHub](https://github.com/nothings/stb/blob/master/stb_image_write.h) |
 | `<thread>`              | Crear y controlar hilos                       | ISO C++ Standard     |
 | `<chrono>`              | Medir tiempos de ejecución                    | ISO C++ Standard     |
 
