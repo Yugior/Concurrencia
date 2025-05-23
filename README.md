@@ -63,7 +63,8 @@ Esta operación se ejecuta **una vez por píxel**.
 
 ## 🧪 Pruebas
 
-Se usó una imagen de entrada llamada `input.jpg` (resolución: 1920x1080).
+A tomar en consideración, se realizaron las prouebas usando imagenes jpg, asi como sus salida. Podria ocacionar fallas en caso de usar otro archivo de imagen por lo que se recomienda solo usar imagenes con extensión `.jpg`
+Se usó una imagen de entrada llamada `input.jpg`.
 
 ### Resultados:
 
@@ -75,6 +76,9 @@ Se usó una imagen de entrada llamada `input.jpg` (resolución: 1920x1080).
 Estas pruebas se realizaron usando `#include <chrono>`
 
 ![Prueba de ejecución](Prueba_imagen.png)
+
+En caso de realizar pruebas, estan `kirbo.jpg` y `Sore.jpg`
+
 
 ---
 
