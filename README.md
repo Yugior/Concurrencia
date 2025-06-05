@@ -3,9 +3,9 @@
 ## A01712206  
 ## 23/05/2025  
 
-# 🖼️ Renderizador de Imágenes en Escala de Grises
+#  Renderizador de Imágenes en Escala de Grises
 
-## 📌 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este proyecto convierte imágenes a escala de grises usando dos enfoques distintos:
 - **Programación concurrente** (utilizando múltiples hilos).
@@ -15,9 +15,9 @@ El objetivo es demostrar cómo el paradigma de **concurrencia** puede optimizar 
 
 ---
 
-## 🧠 Paradigmas de Programación Usados
+##  Paradigmas de Programación Usados
 
-### 🔄 Concurrencia
+###  Concurrencia
 
 La **concurrencia** permite ejecutar varias tareas al mismo tiempo dividiendo el trabajo en **hilos** (`threads`). Es especialmente útil cuando:
 - Hay múltiples núcleos de CPU disponibles.
@@ -31,7 +31,7 @@ La **programación secuencial** ejecuta las instrucciones **una tras otra**, en 
 
 ---
 
-## 🔍 Diferencias entre los enfoques
+##  Diferencias entre los enfoques
 
 | Característica        | Secuencial                           | Concurrente                                 |
 |-----------------------|--------------------------------------|---------------------------------------------|
@@ -43,7 +43,7 @@ La **programación secuencial** ejecuta las instrucciones **una tras otra**, en 
 
 ---
 
-## 🧩 Operación Estándar: Conversión a Escala de Grises
+##  Operación Estándar: Conversión a Escala de Grises
 
 En ambas versiones, la operación que se realiza sobre cada píxel es:
 
@@ -55,7 +55,7 @@ Esta operación se ejecuta **una vez por píxel**.
 
 ---
 
-## ⚙️ Bibliotecas utilizadas
+##  Bibliotecas utilizadas
 
 | Biblioteca              | Propósito                                      | Fuente / Referencia |
 |-------------------------|-----------------------------------------------|----------------------|
@@ -66,7 +66,7 @@ Esta operación se ejecuta **una vez por píxel**.
 
 ---
 
-## 🧪 Pruebas
+##  Pruebas
 
 A tomar en consideración, se realizaron las prouebas usando imagenes jpg, asi como sus salida. Podria ocacionar fallas en caso de usar otro archivo de imagen por lo que se recomienda solo usar imagenes con extensión `.jpg`
 Se usó una imagen de entrada llamada `input.jpg`.
@@ -89,15 +89,15 @@ En caso de realizar pruebas de error, esta `sorita.png`.
 
 ---
 
-## 📊 Análisis de Complejidad
+##  Análisis de Complejidad
 
-### ✅ Versión Secuencial
+###  Versión Secuencial
 
 - Recorre cada píxel una vez: `O(n)`
 - `n = ancho × alto` (cantidad de píxeles)
 - No hay operaciones anidadas
 
-### ⚡ Versión Concurrente
+###  Versión Concurrente
 
 - Cada hilo procesa una fracción de los píxeles: `O(n/t)` por hilo
 - Tiempo total (asumiendo paralelismo ideal): `O(n / t)`, donde `t` = número de hilos
@@ -107,7 +107,7 @@ Ambas versiones tienen **complejidad teórica O(n)**, pero en la práctica, la v
 
 ---
 
-## 🏛️ Modelo y Arquitectura
+##  Modelo y Arquitectura
 
 ### Diagrama de arquitectura
 
@@ -163,7 +163,7 @@ g++ -std=c++11 -pthread sequential.cpp -o renderizador
 ```
 ---
 
-## ✅ Conclusión
+##  Conclusión
 
 Este proyecto demuestra cómo la **programación concurrente**, cuando se aplica a problemas paralelizables como el procesamiento de imágenes, puede **mejorar significativamente el rendimiento**, sin cambiar la complejidad teórica.
 
@@ -174,7 +174,8 @@ Se presentan dos soluciones:
 Ambas están documentadas, probadas y correctamente implementadas.
 
 ---
-## 📚 Referencias
+
+##  Referencias
 
 - Barrett, S. (2023). *stb single-file public domain libraries*. GitHub. https://github.com/nothings/stb  
 - ISO/IEC. (2017). *ISO/IEC 14882:2017 - Programming Languages — C++*. ISO.  
