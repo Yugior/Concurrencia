@@ -163,6 +163,53 @@ g++ -std=c++11 -pthread sequential.cpp -o renderizador
 ```
 ---
 
+# Comparación de Paradigmas: Lógico vs Concurrente
+
+## Paradigma Lógico
+
+El **paradigma lógico** se basa en la declaración de **hechos** y **reglas**, dejando que el sistema infiera respuestas. Es un modelo **declarativo**, comúnmente usado en lenguajes como **Prolog**, ideal para problemas de deducción lógica e inteligencia artificial.
+
+### Características:
+- Se enfoca en **qué** se quiere lograr, no en **cómo** lograrlo.
+- Usa un motor de inferencia para resolver consultas.
+- Evita estructuras imperativas como bucles o condiciones explícitas.
+
+### Ejemplo en Prolog (conceptual):
+
+```prolog
+% Hecho: definir un píxel con valores RGB
+pixel(120, 200, 150).
+
+% Regla: convertir un píxel a escala de grises
+gris(Pixel, Gray) :- 
+    Pixel = pixel(R, G, B),
+    Gray is 0.3*R + 0.59*G + 0.11*B.
+```
+
+
+Aunque se puede expresar la lógica del cálculo, **no es eficiente ni práctico para recorrer matrices de millones de píxeles**, como en el procesamiento de imágenes.
+
+---
+
+## Comparación con el Paradigma Concurrente
+
+| Característica            | Lógico (Prolog)                          | Concurrente (C++ threads)              |
+|---------------------------|------------------------------------------|----------------------------------------|
+| Modelo de control         | Declarativo (qué)                        | Imperativo (cómo)                      |
+| Paralelismo               | No es su enfoque principal               | Uso directo de múltiples hilos         |
+| Tipo de problemas         | Inferencia lógica, relaciones, IA        | Cómputo intensivo, procesamiento masivo|
+| Ventaja principal         | Código conciso para lógica compleja      | Aprovechamiento total del hardware     |
+| Desventaja principal      | Ineficiente para tareas de bajo nivel    | Mayor dificultad para implementar      |
+
+---
+
+## Reflexión
+
+El paradigma **lógico** es excelente para tareas como la resolución de acertijos, IA simbólica o motores de reglas. Sin embargo, **no está diseñado para tareas de cómputo intensivo y estructurado** como el procesamiento de imágenes.
+
+En cambio, el uso de **concurrencia en C++** permite dividir el trabajo entre varios núcleos del procesador, reduciendo drásticamente el tiempo de ejecución. Por eso, para este proyecto, el enfoque concurrente es **la opción más adecuada y eficiente**.
+
+
 ##  Conclusión
 
 Este proyecto demuestra cómo la **programación concurrente**, cuando se aplica a problemas paralelizables como el procesamiento de imágenes, puede **mejorar significativamente el rendimiento**, sin cambiar la complejidad teórica.
@@ -174,7 +221,11 @@ Se presentan dos soluciones:
 Ambas están documentadas, probadas y correctamente implementadas.
 
 ---
+## Actualización
 
+        - Se agrego la comparcion entre paradigmas como posible solucion adicional al presentado.
+
+---
 ##  Referencias
 
 - Barrett, S. (2023). *stb single-file public domain libraries*. GitHub. https://github.com/nothings/stb  
